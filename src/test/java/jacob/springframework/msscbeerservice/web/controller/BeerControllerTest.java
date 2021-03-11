@@ -1,7 +1,6 @@
 package jacob.springframework.msscbeerservice.web.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jacob.springframework.msscbeerservice.domain.Beer;
 import jacob.springframework.msscbeerservice.web.modal.BeerDto;
 import jacob.springframework.msscbeerservice.web.modal.BeerStyleEnum;
 import org.junit.jupiter.api.Test;
