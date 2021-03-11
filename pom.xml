@@ -82,8 +82,8 @@
                 <!--suppress UnresolvedMavenProperty -->
                 <configuration>
                     <source>11</source>
+                    <release>11</release>
                     <target>11</target>
-                    <compilerArgs>--enable-preview</compilerArgs>
                     <annotationProcessorPaths>
                         <path>
                             <groupId>org.projectlombok</groupId>
