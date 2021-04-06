@@ -2,14 +2,12 @@
 
 import jacob.springframework.msscbeerservice.domain.Beer;
 import jacob.springframework.msscbeerservice.repositories.BeerRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.math.BigDecimal;
 
 @Component
-@RequiredArgsConstructor
 public class BeerLoader implements CommandLineRunner {
 
     public static final Long BEER_1_UPC = 0631234200036L;
@@ -18,10 +16,14 @@ public class BeerLoader implements CommandLineRunner {
 
     private final BeerRepository beerRepository;
 
+    public BeerLoader(BeerRepository beerRepository) {
+        this.beerRepository = beerRepository;
+    }
+
     @Override
     public void run(String... args) throws Exception {
 
-        if(beerRepository.count() == 0 ) {
+        if (beerRepository.count() == 0) {
             loadBeerObjects();
         }
     }
